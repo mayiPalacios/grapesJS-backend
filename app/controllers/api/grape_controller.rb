@@ -5,7 +5,9 @@ class GrapeController < ApplicationController
    end
 
    def index
+      html = params[:html]
      
+      
    end
 
 
