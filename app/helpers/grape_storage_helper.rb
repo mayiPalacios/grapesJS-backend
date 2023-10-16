@@ -1,0 +1,2 @@
+module GrapeStorageHelper
+end
