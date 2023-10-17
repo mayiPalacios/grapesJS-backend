@@ -16,8 +16,9 @@ class Api::GrapeTemplateController < ApplicationController
     end
  
     def index
-        @grape_templates = GrapeTemplate.all
-        render json: @grape_templates
+
+        @grape_templates = GrapeTemplate.find(20)
+        render 'api/grape_templates/index'
     end
  
 
