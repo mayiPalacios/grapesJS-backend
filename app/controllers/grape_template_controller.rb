@@ -1,0 +1,2 @@
+class GrapeTemplateController < ApplicationController
+end

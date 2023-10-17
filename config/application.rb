@@ -15,10 +15,19 @@ Bundler.require(*Rails.groups)
 module Grape
 
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    
     config.load_defaults 7.0
+       
+    
+    # config/initializers/cors.rb
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*' # Puedes reemplazar '*' con el dominio específico o los dominios permitidos.
+        resource '*', headers: :any, methods: %i[get post put patch delete options]
+      end
+    end
+    
 
-    # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.

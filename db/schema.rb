@@ -11,8 +11,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_16_205058) do
-  create_table "grapes", force: :cascade do |t|
-    t.string "html_template"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "grape_templates", force: :cascade do |t|
+    t.text "html_template"
     t.string "json_template"
     t.string "css"
     t.datetime "created_at", null: false

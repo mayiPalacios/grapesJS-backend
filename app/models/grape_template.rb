@@ -1,0 +1,2 @@
+class GrapeTemplate < ApplicationRecord
+end
