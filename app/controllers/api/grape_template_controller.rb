@@ -16,9 +16,10 @@ class Api::GrapeTemplateController < ApplicationController
     end
  
     def index
-
-        @grape_templates = GrapeTemplate.find(20)
-        render 'api/grape_templates/index'
+       id = params[:id]
+        @grape_templates = GrapeTemplate.find(id)
+        
+        render  html: @grape_templates.html_template
     end
  
 
